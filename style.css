@@ -1,0 +1,184 @@
+:root {
+    --Green-500: hsl(158, 36%, 37%);
+    --Green-700: hsl(158, 42%, 18%);
+    --Black: hsl(212, 21%, 14%);
+    --Grey: hsl(228, 12%, 48%);
+    --Cream: hsl(30, 38%, 92%);
+    --White: hsl(0, 0%, 100%);
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(fonts/Montserrat-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(fonts/Montserrat-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Fraunces";
+    src: url(fonts/Fraunces_72pt-Bold.ttf);
+    font-weight: 700;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--Cream);
+    height: 100vh;
+}
+
+.Container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.Card {
+    background-color: var(--White);
+    display: flex;
+    border-radius: 1rem;
+    max-width: 40rem;
+    margin: 1rem;
+    width: calc(100% - 2rem);
+}
+
+.Image {
+    height: 30rem;
+}
+
+.Image img {
+    width: 20rem;
+    border-radius: 1rem 0rem 0rem 1rem;
+}
+
+.Content {
+    padding: 2rem;
+}
+
+.Type {
+    font-family: "Montserrat";
+    font-weight: 500;
+    letter-spacing: 0.25rem;
+    color: var(--Grey);
+}
+
+.Product-Title {
+    font-family: "Fraunces";
+    font-weight: 700;
+    font-size: 2.25rem;
+    padding: 1rem 0rem;
+}
+
+.Product-Info {
+    font-family: "Montserrat";
+    font-weight: 500;
+    color: var(--Grey);
+    padding: 0.5rem 0rem;
+}
+
+.Purchase-Info {
+    display: flex;
+    padding: 1rem 0rem;
+    align-items: center;
+}
+
+.Current-Price {
+    font-family: "Fraunces";
+    font-weight: 700;
+    font-size: 2.25rem;
+    color: var(--Green-500);
+}
+
+.Old-Price {
+    font-family: "Montserrat";
+    font-weight: 500;
+    color: var(--Grey);
+    padding: 0rem 1rem;
+}
+
+.Purchase-Btn {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.Cart-SVG {
+    height: 1rem;
+}
+
+.Purchase-Btn button {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 0.9rem;
+    background-color: var(--Green-500);
+    color: var(--White);
+    border: none;
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 3rem;
+}
+
+.attribution { position: fixed; font-size: 11px; text-align: center; bottom: 1rem;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (hover: hover) {
+    .Purchase-Btn button {
+        transition: 0.2s linear;
+        cursor: pointer;
+    }
+
+    .Purchase-Btn button:hover {
+        background-color: var(--Green-700);
+    }
+}
+
+@media (max-width: 675px) {
+    .Card {
+        flex-direction: column;
+    }
+
+    .Image {
+        height: 100%;
+        width: 100%;
+        max-width: 40rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Image img {
+        width: 20rem;
+        border-radius: 0rem;
+    }
+
+    .Product-Title {
+        font-size: 2rem;
+    }
+
+    .Type {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 477px) {
+    .Image {
+        width: 100%;
+        max-width: 27.75rem;
+        height: 100%;
+    }
+
+    .Image img {
+        width: 100%;
+        border-radius: 1rem 1rem 0rem 0rem;
+    }
+}
